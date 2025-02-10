@@ -22,8 +22,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={inter.className}>
-      <body className="min-h-screen bg-gray-50 font-sans antialiased">
-        <div className="relative flex min-h-screen flex-col">
+      <body className="min-h-screen bg-background font-sans antialiased">
+        <div className="relative bg-gray-50 flex min-h-screen flex-col">
           <Header />
           <div className="flex-1">
             <main className="container mx-auto py-6 px-4">{children}</main>

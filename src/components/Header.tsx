@@ -1,10 +1,10 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
-    <header className="bg-background border-b">
-      <nav className="container mx-auto flex justify-between items-center py-4">
+    <header className="bg-white border-b">
+      <nav className="container mx-auto px-2 md:px-0 flex justify-between items-center py-4">
         <Link href="/" className="text-2xl font-bold text-primary">
           マイブログ
         </Link>
@@ -27,6 +27,5 @@ export default function Header() {
         </ul>
       </nav>
     </header>
-  )
+  );
 }
-

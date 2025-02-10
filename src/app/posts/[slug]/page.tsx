@@ -4,7 +4,6 @@ import Link from "next/link";
 import remarkGfm from "remark-gfm";
 import { Pre } from "@/components/Pre";
 import { Code } from "@/components/Code";
-import type { Metadata } from "next";
 import { CalendarDays, Tag } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -18,27 +17,29 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
   return (
     <div className="bg-gray-50 min-h-screen py-12">
-      <article className="container mx-auto px-4 max-w-3xl bg-white shadow-lg rounded-lg overflow-hidden">
+      <article className="container mx-auto px-4 max-w-6xl bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="p-8">
-          <h1 className="text-4xl font-bold mb-4 text-gray-900">
-            {postData.title}
-          </h1>
-          <div className="flex items-center text-sm text-gray-600 mb-4">
-            <CalendarDays className="w-4 h-4 mr-2" />
-            <time dateTime={postData.date}>{postData.date}</time>
-          </div>
-          <div className="flex flex-wrap items-center mb-8">
-            <Tag className="w-4 h-4 mr-2 text-gray-600" />
-            {postData.tags &&
-              postData.tags.map((tag) => (
-                <Link
-                  key={tag}
-                  href={`/tags/${tag}`}
-                  className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-medium text-gray-700 mr-2 mb-2 hover:bg-gray-200  transition-colors"
-                >
-                  {tag}
-                </Link>
-              ))}
+          <div className="border-b-2 mb-6">
+            <h1 className="text-4xl font-bold mb-4 text-gray-900">
+              {postData.title}
+            </h1>
+            <div className="flex items-center text-sm text-gray-600 mb-4">
+              <CalendarDays className="w-4 h-4 mr-2" />
+              <time dateTime={postData.date}>{postData.date}</time>
+            </div>
+            <div className="flex flex-wrap items-center mb-2">
+              <Tag className="w-4 h-4 mr-2 text-gray-600" />
+              {postData.tags &&
+                postData.tags.map((tag) => (
+                  <Link
+                    key={tag}
+                    href={`/tags/${tag}`}
+                    className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-medium text-gray-700 mr-2 mb-2 hover:bg-gray-200  transition-colors"
+                  >
+                    {tag}
+                  </Link>
+                ))}
+            </div>
           </div>
           <div className="prose prose-lg max-w-none">
             <ReactMarkdown
