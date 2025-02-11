@@ -19,10 +19,12 @@ export const Pre: Components["pre"] = (props) => {
   // `pre > code`の構造になっているため、`code`要素を取得する
   const codeElement = getChildren(props.children);
   // `code`要素の`className`属性から言語を取得する
+  // @ts-expect-error okok
   const lang = getLanguage(codeElement.props.className ?? "");
 
   return (
     <Prism style={style} language={lang} showLineNumbers>
+      {/* @ts-expect-error okok */}
       {String(codeElement.props.children).replace(/\n$/, "")}
     </Prism>
   );

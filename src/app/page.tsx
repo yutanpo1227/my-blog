@@ -6,7 +6,7 @@ export default async function Home() {
 
   return (
     <div className="lg:w-2/3 container mx-auto px-4">
-      <h1 className="text-3xl font-bold mb-8">最新の記事</h1>
+      <h1 className="text-2xl md:text-3xl font-bold mb-8">最新の記事</h1>
       <div className="flex justify-center">
         <PostList posts={posts} />
       </div>

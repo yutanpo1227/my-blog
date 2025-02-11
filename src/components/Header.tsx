@@ -6,7 +6,7 @@ export default function Header() {
     <header className="bg-white border-b">
       <nav className="container mx-auto px-2 md:px-0 flex justify-between items-center py-4">
         <Link href="/" className="text-2xl font-bold text-primary">
-          マイブログ
+          Y-Blog
         </Link>
         <ul className="flex space-x-4">
           <li>
