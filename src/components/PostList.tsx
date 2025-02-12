@@ -19,18 +19,18 @@ export default function PostList({ posts }: PostListProps) {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
       {posts.map((post) => (
         <Link key={post.slug} href={`/posts/${post.slug}`} className="block">
-          <div className="border rounded-lg p-4 bg-white  hover:shadow-lg transition-shadow duration-300 ease-in-out h-full">
+          <div className="border rounded-lg p-4 bg-white text-card-foreground hover:shadow-lg transition-shadow duration-300 ease-in-out h-full">
             <div className="flex flex-col space-y-4">
-              <div className="w-full h-[200px] relative">
+              <div className="w-full h-[300px] relative">
                 <Image
                   src={`/thumbnails/${post.slug}.png`}
                   alt={post.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-md"
+                  fill
+                  className="rounded-md object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <div className="flex flex-col gap-4">

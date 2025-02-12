@@ -16,9 +16,13 @@ export default async function TagPage({
   const posts = await getPostsByTag(decodedTag);
 
   return (
-    <div className="container mx-auto px-4">
-      <h1 className="text-3xl font-bold mb-8">タグ: {decodedTag}</h1>
-      <PostList posts={posts} />
+    <div className="lg:w-2/3 container mx-auto px-4">
+      <h1 className="text-2xl md:text-3xl font-bold mb-8">
+        タグ: {decodedTag}
+      </h1>
+      <div className="flex justify-center">
+        <PostList posts={posts} />
+      </div>
     </div>
   );
 }

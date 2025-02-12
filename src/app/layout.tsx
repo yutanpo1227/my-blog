@@ -8,11 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "マイブログ",
-    template: "%s | マイブログ",
+    default: "Y-Blog",
+    template: "%s | Y-Blog",
   },
-  description:
-    "ウェブ開発、プログラミング、テクノロジーに関する記事を提供するブログです。",
+  description: "yutanpo1227のブログです。",
 };
 
 export default function RootLayout({

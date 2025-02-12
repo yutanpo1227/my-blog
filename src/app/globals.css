@@ -22,12 +22,20 @@
   @apply font-semibold;
 }
 
-.markdown a {
-  @apply text-blue-600 font-semibold hover:underline;
-}
-
 .markdown strong a {
   @apply font-bold;
+}
+
+.markdown h1 {
+  @apply leading-tight border-b border-gray-200 text-2xl md:text-3xl font-semibold mb-4 mt-6 pb-2;
+}
+
+.markdown h2 {
+  @apply leading-tight border-b border-gray-200 text-xl md:text-2xl font-semibold mb-4 mt-6 pb-2;
+}
+
+.markdown h3 {
+  @apply leading-snug text-lg md:text-xl font-semibold mb-4 mt-6;
 }
 
 .markdown h4 {
@@ -47,7 +55,7 @@
 }
 
 .markdown code {
-  @apply font-mono text-sm sm:text-base inline bg-gray-200 rounded px-1 py-1;
+  @apply font-mono text-xs sm:text-sm inline bg-gray-200 rounded px-1 py-1;
 }
 
 .markdown pre {
@@ -83,6 +91,6 @@
 }
 
 /* Override pygments style background color. */
-.markdown .highlight pre {
+/* .markdown .highlight pre {
   @apply bg-gray-100 !important;
-}
+} */
