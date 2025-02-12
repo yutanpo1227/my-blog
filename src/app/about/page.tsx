@@ -7,8 +7,8 @@ export default function About() {
 
   return (
     <div className="bg-gray-50 min-h-screen py-12">
-      <article className="container mx-auto px-4 max-w-6xl bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="p-8 divide-y-2">
+      <article className="container mx-auto md:px-4 max-w-6xl bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="py-8 px-4 md:px-8 divide-y-2">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
             {title}
           </h1>
