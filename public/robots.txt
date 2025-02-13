@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://y-blog-livid.vercel.app/
-
-# Sitemaps
-Sitemap: https://y-blog-livid.vercel.app/sitemap.xml
