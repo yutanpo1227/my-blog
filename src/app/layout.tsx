@@ -21,6 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja" className={inter.className}>
+      <meta
+        name="google-site-verification"
+        content="yls0n_4Y7DnKtNpTU9p6N5It8fWnSPvj5IeV-0KgI50"
+      />
       <body className="min-h-screen bg-background font-sans antialiased">
         <div className="relative bg-gray-50 flex min-h-screen flex-col">
           <Header />
