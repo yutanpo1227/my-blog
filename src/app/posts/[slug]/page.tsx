@@ -35,6 +35,7 @@ export async function generateMetadata({
       "og:image": path.join(baseUrl, "thumbnails", `${slug}.png`),
       "og:url": path.join(baseUrl, "posts", slug),
       "twitter:card": "summary",
+      "twitter:site": "@yuu_gakusei",
       "twitter:title": postData.title,
       "twitter:description": postData.content.slice(0, 100),
       "twitter:image": path.join(baseUrl, "thumbnails", `${slug}.png`),
