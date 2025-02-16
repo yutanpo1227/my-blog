@@ -6,10 +6,43 @@ import { Pre } from "@/components/Pre";
 import { Code } from "@/components/Code";
 import { LinkCard } from "@/components/LinkCard";
 import { CalendarDays, Tag } from "lucide-react";
+import path from "path";
 
 export async function generateStaticParams() {
   const paths = getAllPostSlugs();
   return paths;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const postData = getPostData(slug);
+  return {
+    title: postData.title,
+    description: postData.content.slice(0, 100),
+    other: {
+      "google-site-verification": "yls0n_4Y7DnKtNpTU9p6N5It8fWnSPvj5IeV-0KgI50",
+      "og:title": postData.title,
+      "og:description": postData.content.slice(0, 100),
+      "og:image": path.join(
+        process.env.VERCEL_URL!,
+        "thumbnail",
+        `${slug}.png`
+      ),
+      "og:url": path.join(process.env.VERCEL_URL!, "posts", slug),
+      "twitter:card": "summary",
+      "twitter:title": postData.title,
+      "twitter:description": postData.content.slice(0, 100),
+      "twitter:image": path.join(
+        process.env.VERCEL_URL!,
+        "thumbnail",
+        `${slug}.png`
+      ),
+    },
+  };
 }
 
 export default async function Post({

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     template: "%s | Y-Blog",
   },
   description: "yutanpo1227のブログです。",
+  other: {
+    "google-site-verification": "yls0n_4Y7DnKtNpTU9p6N5It8fWnSPvj5IeV-0KgI50",
+  },
 };
 
 export default function RootLayout({
