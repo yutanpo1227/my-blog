@@ -35,7 +35,7 @@ export async function generateMetadata({
       "twitter:card": "summary",
       "twitter:title": postData.title,
       "twitter:description": postData.content.slice(0, 100),
-      "twitter:image": path.join(baseUrl, "thumbnail", `${slug}.png`),
+      "twitter:image": path.join(baseUrl, "thumbnails", `${slug}.png`),
     },
   };
 }
