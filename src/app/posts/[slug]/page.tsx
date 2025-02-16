@@ -28,6 +28,8 @@ export async function generateMetadata({
     description: postData.content.slice(0, 100),
     other: {
       "google-site-verification": "yls0n_4Y7DnKtNpTU9p6N5It8fWnSPvj5IeV-0KgI50",
+      "og:type": "article",
+      "og:site_name": "Y-Blog",
       "og:title": postData.title,
       "og:description": postData.content.slice(0, 100),
       "og:image": path.join(baseUrl, "thumbnails", `${slug}.png`),
