@@ -6,10 +6,41 @@ import { Pre } from "@/components/Pre";
 import { Code } from "@/components/Code";
 import { LinkCard } from "@/components/LinkCard";
 import { CalendarDays, Tag } from "lucide-react";
+import path from "path";
 
 export async function generateStaticParams() {
   const paths = getAllPostSlugs();
   return paths;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const postData = getPostData(slug);
+  const baseUrl = !process.env.VERCEL_URL!.includes("http")
+    ? `https://${process.env.VERCEL_URL!}`
+    : process.env.VERCEL_URL!;
+  return {
+    title: postData.title,
+    description: postData.content.slice(0, 100),
+    other: {
+      "google-site-verification": "yls0n_4Y7DnKtNpTU9p6N5It8fWnSPvj5IeV-0KgI50",
+      "og:type": "article",
+      "og:site_name": "Y-Blog",
+      "og:title": postData.title,
+      "og:description": postData.content.slice(0, 100),
+      "og:image": path.join(baseUrl, "thumbnails", `${slug}.png`),
+      "og:url": path.join(baseUrl, "posts", slug),
+      "twitter:card": "summary",
+      "twitter:site": "@yuu_gakusei",
+      "twitter:title": postData.title,
+      "twitter:description": postData.content.slice(0, 100),
+      "twitter:image": path.join(baseUrl, "thumbnails", `${slug}.png`),
+    },
+  };
 }
 
 export default async function Post({
