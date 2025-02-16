@@ -30,7 +30,7 @@ export async function generateMetadata({
       "google-site-verification": "yls0n_4Y7DnKtNpTU9p6N5It8fWnSPvj5IeV-0KgI50",
       "og:title": postData.title,
       "og:description": postData.content.slice(0, 100),
-      "og:image": path.join(baseUrl, "thumbnail", `${slug}.png`),
+      "og:image": path.join(baseUrl, "thumbnails", `${slug}.png`),
       "og:url": path.join(baseUrl, "posts", slug),
       "twitter:card": "summary",
       "twitter:title": postData.title,
