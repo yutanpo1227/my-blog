@@ -20,6 +20,9 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const postData = getPostData(slug);
+  const baseUrl = !process.env.VERCEL_URL!.includes("http")
+    ? `https://${process.env.VERCEL_URL!}`
+    : process.env.VERCEL_URL!;
   return {
     title: postData.title,
     description: postData.content.slice(0, 100),
@@ -27,20 +30,12 @@ export async function generateMetadata({
       "google-site-verification": "yls0n_4Y7DnKtNpTU9p6N5It8fWnSPvj5IeV-0KgI50",
       "og:title": postData.title,
       "og:description": postData.content.slice(0, 100),
-      "og:image": path.join(
-        process.env.VERCEL_URL!,
-        "thumbnail",
-        `${slug}.png`
-      ),
-      "og:url": path.join(process.env.VERCEL_URL!, "posts", slug),
+      "og:image": path.join(baseUrl, "thumbnail", `${slug}.png`),
+      "og:url": path.join(baseUrl, "posts", slug),
       "twitter:card": "summary",
       "twitter:title": postData.title,
       "twitter:description": postData.content.slice(0, 100),
-      "twitter:image": path.join(
-        process.env.VERCEL_URL!,
-        "thumbnail",
-        `${slug}.png`
-      ),
+      "twitter:image": path.join(baseUrl, "thumbnail", `${slug}.png`),
     },
   };
 }
