@@ -112,7 +112,7 @@ def home():
 
 # Space の起動
 
-コードの変更をコミットすると自動でビルドが始まるのですが、GPU を選択すると画像のように`Building on {GPU名}`となる。
+コードの変更をコミットすると自動でビルドが始まるが、GPU を選択すると画像のように`Building on {GPU名}`となる。
 ![](/images/huggingface-docker2/building.png)
 ビルドが終わると`Running on {GPU名}`となる。
 ![](/images/huggingface-docker2/running.png)
@@ -121,5 +121,7 @@ Space が起動すると、ちゃんとルートページに使用している G
 # まとめ
 
 本記事では、前回の記事の続きとして HuggingFace Space 上で GPU を利用できる API サーバーの作成を行った。
+
 GPU 活用のための環境構築: NVIDIA が提供する公式 CUDA イメージ（nvidia/cuda:12.1.1-cudnn8-devel-ubuntu22.04）をベースに採用することで、最新の GPU 計算環境と cuDNN ライブラリを手軽に利用可能となった。
+
 今回の実装で、HuggingFace Space を活用した API サーバー構築の基盤が整った。GPU を活用した様々な機械学習モデルの推論や処理に対応できるサーバーの開発が期待できる。
