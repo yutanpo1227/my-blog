@@ -20,7 +20,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const postData = getPostData(slug);
   const baseUrl = !process.env.VERCEL_URL!.includes("http")
-    ? `https://${process.env.VERCEL_URL!}`
+    ? `https://y-blog-livid.vercel.app`
     : process.env.VERCEL_URL!;
   return {
     title: postData.title,
