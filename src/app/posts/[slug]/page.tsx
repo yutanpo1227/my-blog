@@ -30,7 +30,11 @@ export async function generateMetadata({
       site_name: "Y-Blog",
       title: postData.title,
       description: postData.content.slice(0, 100),
-      image: `${baseUrl}/thumbnails/${slug}.png`,
+      images: [
+        {
+          url: `${baseUrl}/thumbnails/${slug}.png`,
+        },
+      ],
       url: `${baseUrl}/posts/${slug}`,
     },
   };
