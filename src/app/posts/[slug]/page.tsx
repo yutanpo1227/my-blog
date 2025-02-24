@@ -26,6 +26,7 @@ export async function generateMetadata({
   return {
     title: postData.title,
     description: postData.content.slice(0, 100),
+    image: path.join(baseUrl, "thumbnails", `${slug}.png`),
     other: {
       "google-site-verification": "yls0n_4Y7DnKtNpTU9p6N5It8fWnSPvj5IeV-0KgI50",
       "og:type": "article",
