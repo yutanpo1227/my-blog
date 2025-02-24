@@ -6,7 +6,6 @@ import { Pre } from "@/components/Pre";
 import { Code } from "@/components/Code";
 import { LinkCard } from "@/components/LinkCard";
 import { CalendarDays, Tag } from "lucide-react";
-import path from "path";
 
 export async function generateStaticParams() {
   const paths = getAllPostSlugs();
