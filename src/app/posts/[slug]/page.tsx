@@ -25,20 +25,13 @@ export async function generateMetadata({
   return {
     title: postData.title,
     description: postData.content.slice(0, 100),
-    image: `${baseUrl}/thumbnails/${slug}.png`,
-    other: {
-      "google-site-verification": "yls0n_4Y7DnKtNpTU9p6N5It8fWnSPvj5IeV-0KgI50",
-      "og:type": "article",
-      "og:site_name": "Y-Blog",
-      "og:title": postData.title,
-      "og:description": postData.content.slice(0, 100),
-      "og:image": `${baseUrl}/thumbnails/${slug}.png`,
-      "og:url": `${baseUrl}/posts/${slug}`,
-      "twitter:card": "summary",
-      "twitter:site": "@yuu_gakusei",
-      "twitter:title": postData.title,
-      "twitter:description": postData.content.slice(0, 100),
-      "twitter:image": `${baseUrl}/thumbnails/${slug}.png`,
+    openGraph: {
+      type: "article",
+      site_name: "Y-Blog",
+      title: postData.title,
+      description: postData.content.slice(0, 100),
+      image: `${baseUrl}/thumbnails/${slug}.png`,
+      url: `${baseUrl}/posts/${slug}`,
     },
   };
 }
