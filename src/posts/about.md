@@ -13,7 +13,7 @@ title: "自己紹介"
 
 普段は情報系学生としてアルゴリズムや機械学習などの勉強をしていますが、趣味でハードや Web 系などに手を出したりしています。
 
-現在は SparkleAI 株式会社でエンジニアインターンをしています。
+現在は [SparkleAI 株式会社](https://www.sparkleai.co.jp)でエンジニアインターンをしています。
 
 ### 興味のある技術
 
@@ -47,10 +47,10 @@ title: "自己紹介"
 ## 2023 年度 ~
 
 - SparkleAI 株式会社でのエンジニアインターン(現在継続中)
-  - ブロックチェーン技術を用いたキャンペーンプラットフォーム[Rattle](https://www.rattle.cc/)の開発
-  - Defi を用いた仮想通貨送受金システム[finest](https://finestt.me/)の開発
+  - ブロックチェーン技術を用いたキャンペーンプラットフォーム Rattle の開発
+  - Defi を用いた仮想通貨送受金システム finestt の開発
   - EtherScan API, SuperBlocks を用いたブロックチェーン・スマートコントラクト向け BI ツールの開発
-  - WebRTC×AI エージェント技術を用いた[音声 AI エージェント](https://getprojecton.com/)の開発
+  - WebRTC×AI エージェント技術を用いた音声 AI エージェントの開発
   - Pinecone, VercelAI SDK を用いた社内向けチャットボットの開発
 
 # Contact
