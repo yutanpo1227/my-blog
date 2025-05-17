@@ -11,16 +11,19 @@ title: "自己紹介"
 小学 5 年生からロボカップという大会に出場し始め、サッカーでは Kollagen、レスキューシミュレーションでは Tetu&Teru&Yu というチームに所属していました。
 最高順位はレスキューシミュレーション世界 5 位でした。
 
-普段は情報系学生としてアルゴリズムや機械学習などの勉強をしていますが、趣味でハードや Web 系などに手を出したりしています。
+普段は情報系学生としてアルゴリズムや機械学習などの勉強, 研究をしていますが、趣味でハードや Web 系などに手を出したりしています。
 
 現在は [SparkleAI 株式会社](https://www.sparkleai.co.jp)でエンジニアインターンをしています。
 
-### 興味のある技術
+### スキル
 
-- Arduino, M5Stack
-- Python, Pytorch
-- Typescript, Next.js, React
-- Postgres, Prisma
+- Arduino, M5Stack, PlatformIO
+- Python, Pytorch, FastAPI, OpenCV, HuggingFace
+- Typescript, Next.js, React, Vercel
+- Docker
+- Postgres, MySQL, Prisma
+- Firebase, Supabase
+- Fusion360
   など
 
 ## 2020 年度
