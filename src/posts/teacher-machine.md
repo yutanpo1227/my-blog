@@ -1,6 +1,6 @@
 ---
 title: "TeacherMachine - ロボカップジュニアサッカー用見本マシンの開発"
-date: "2025-01-20"
+date: "2025-06-28"
 tags: ["ロボット", "Arduino", "ロボカップ", "組み込み"]
 thumbnail: "/images/teacher-machine/featured.jpg"
 ---
@@ -163,5 +163,5 @@ TeacherMachine の開発を通じて、ロボカップジュニアサッカー�
 
 **関連リンク:**
 
-- [TeacherMachine2025 (メインプロジェクト)](https://github.com/yutanpo1227/TeacherMachine2025)
-- [TeacherMachineSoftware (ソフトウェア専用)](https://github.com/yutanpo1227/TeacherMachineSoftware)
+[TeacherMachine2025 (メインプロジェクト)](https://github.com/yutanpo1227/TeacherMachine2025)
+[TeacherMachineSoftware (ソフトウェア専用)](https://github.com/yutanpo1227/TeacherMachineSoftware)
