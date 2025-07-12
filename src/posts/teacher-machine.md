@@ -136,7 +136,7 @@ lib/
 pio device monitor --baud 9600
 ```
 
-## 完成と評価
+## 完成
 
 ![完成したTeacherMachine](/images/teacher-machine/machine.jpg)
 
