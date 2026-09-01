@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   const posts = getAllPostSlugs();
   const postPaths = posts.map((post) => ({
-    url: `https://y-blog-livid.vercel.app/posts/${post.params.slug}`,
+    url: `https://y-blog-livid.vercel.app/posts/${post.slug}`,
   }));
 
   return [...defaultPages, ...postPaths];

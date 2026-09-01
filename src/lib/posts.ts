@@ -36,13 +36,9 @@ export function getAllPostSlugs() {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames
     .filter((fileName) => fileName !== "about.md")
-    .map((fileName) => {
-      return {
-        params: {
-          slug: fileName.replace(/\.md$/, ""),
-        },
-      };
-    });
+    .map((fileName) => ({
+      slug: fileName.replace(/\.md$/, ""),
+    }));
 }
 
 export function getPostData(slug: string) {

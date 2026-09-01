@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Sitemap: https://y-blog-livid.vercel.app/sitemap.xml
